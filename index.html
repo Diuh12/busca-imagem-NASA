@@ -8,14 +8,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <input id="data" type="date" />
-    <button id="buscar">Buscar</button>
+    <header>
+      <h2>
+        Busca foto e videos disponibilizados pela NASA, com base na data de
+        pesquisa a baixo
+      </h2>
+    </header>
+    <main class="sky">
+      <nav>
+        <input id="data" type="date" />
+        <button id="buscar">Buscar</button>
 
-    <img id="imagem" src="" alt="" />
+        <div class="estrelas"></div>
+      </nav>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./nasa.js"></script>
+      <section class="exibe-imagem">
+        <img id="imagem" src="" alt="" />
+      </section>
 
-    <iframe id="video" width="727" height="409" src="" title="YouTube video player" frameborder="0" ></iframe>
+      <section class="exibe-video">
+        <iframe
+          id="video"
+          width="727"
+          height="409"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+        ></iframe>
+      </section>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="./nasa.js"></script>
+    </main>
   </body>
 </html>
