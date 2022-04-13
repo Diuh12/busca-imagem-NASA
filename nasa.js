@@ -17,12 +17,15 @@ $("#buscar").click(function () {
 
         if (resposta.media_type == "image") {
           console.log(data);
+
+          $("#video").css("display", "none");
           $("#imagem").css("display", "block");
+
           $("#imagem").attr("src", resposta.url);
         } else {
-          console.log(data);
-          $("#video").css("visibility", "show");
+          $("#imagem").css("display", "none");
           $("#video").css("display", "block");
+
           $("#video").attr("src", resposta.url);
         }
       })
