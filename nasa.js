@@ -2,7 +2,7 @@ $("#buscar").click(function () {
   let data = $("#data").val();
 
   let dataHoje = new Date().toISOString().split("T")[0];
-  if (data < "2000-04-11" || data > dataHoje) {
+  if (data < "1995-06-16" || data > dataHoje) {
     alert("Data invalida");
   } else {
     $.get(
@@ -19,11 +19,11 @@ $("#buscar").click(function () {
           console.log(data);
 
           $("#video").css("display", "none");
-          $("#imagem").css("display", "block");
+          $(".exibe-imagem").css("display", "flex");
 
           $("#imagem").attr("src", resposta.url);
         } else {
-          $("#imagem").css("display", "none");
+          $(".exibe-imagem").css("display", "none");
           $("#video").css("display", "block");
 
           $("#video").attr("src", resposta.url);
